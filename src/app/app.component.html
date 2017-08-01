@@ -1,0 +1,85 @@
+<!--The whole content below can be removed with the new code.-->
+<section class="app flex-container" fxLayout="column" fxLayoutAlign="start stretch">
+  <md-toolbar color="primary" class="mat-elevation-z10"> 
+  <button md-icon-button (click)="sidenav.open()">
+    <md-icon>menu</md-icon>
+ </button>  
+ Sales Dashboard
+  <button md-icon-button routerLink="/Searchform" routerLinkActive="active">
+    <md-icon>search</md-icon>
+ </button> 
+  </md-toolbar>
+
+  <!-- this flex item takes the rest of the screen in height -->
+  <md-sidenav-container fxFlex>
+    <md-sidenav mode="side" align="left" opened class="mat-elevation-z6" #sidenav>
+
+   <div class="example-button-row">
+     <nav md-tab-nav-bar>  
+
+       <md-nav-list>  
+        <a md-raised-button  id="stockturnYears" class="menubtn"  routerLink="/KPI" (click)="getTitles($event)"  routerLinkActive="active">Key Metrics</a>
+       </md-nav-list>
+
+       <md-nav-list> 
+        <a md-raised-button id="SCatQty" class="menubtn" routerLink="/Others" (click)="getTitles($event)"  routerLinkActive="active">Varied Analysis</a> 
+       </md-nav-list> 
+     
+
+      <md-nav-list>  
+       <a  md-raised-button id="Sales" class="menubtn" routerLink="/Sales" (click)="getTitles($event)"  routerLinkActive="active">Sales</a>
+      </md-nav-list>
+
+       <md-nav-list>   
+       <a md-raised-button  id="Ecom" class="menubtn" routerLink="/Ecom" (click)="getTitles($event)"  routerLinkActive="active">E-Com</a>
+      </md-nav-list> 
+
+       <md-nav-list>   
+       <a md-raised-button id="Refunds" class="menubtn" routerLink="/Refunds" (click)="getTitles($event)"  routerLinkActive="active">Refunds</a>
+      </md-nav-list>
+
+       <md-nav-list>  
+       <a md-raised-button id="EstProfits" class="menubtn" routerLink="/EstimatedProfits" routerLinkActive="active">Estimated Profits</a>
+      </md-nav-list> 
+
+       <md-nav-list> 
+        <a md-raised-button id="RMA" class="menubtn" routerLink="/Stock" (click)="getTitles($event)"  routerLinkActive="active">Stock</a>
+      </md-nav-list> 
+
+      <md-nav-list>  
+          <a md-raised-button id="Memberships" class="menubtn" routerLink="/Memberships" (click)="getTitles($event)"  routerLinkActive="active">Memberships</a>
+       </md-nav-list>
+
+       <md-nav-list>   
+       <a md-raised-button  id="GiftVch" class="menubtn" routerLink="/GiftVouchers"  (click)="getTitles($event)"  routerLinkActive="active">Gift Vouchers</a>
+       </md-nav-list>  
+
+      <md-nav-list>    
+      <a md-raised-button id="Donations"  class="menubtn" routerLink="/Donation" (click)="getTitles($event)"  routerLinkActive="active">Donation</a>
+      </md-nav-list> 
+     
+       </nav> 
+       </div>
+    
+      <section class="tab-actions">
+        <button md-fab color="warn"  (click)="sidenav.close()">
+          <md-icon>close</md-icon>
+      </button>
+      </section>
+    </md-sidenav>
+   
+<router-outlet></router-outlet>
+ </md-sidenav-container>
+</section>
+
+
+
+
+
+
+  
+ 
+
+
+
+

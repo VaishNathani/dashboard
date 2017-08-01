@@ -1,0 +1,114 @@
+<nav md-tab-nav-bar>     
+        <a md-raised-button id="OpStock" [routerLink]="['/Stock', {outlets: {'content1': ['NumberCard'],  'content2': ['VerticalBarChart']}}]" (click)="getTitles($event)"  routerLinkActive="active">Opening Stock</a> 
+        <a md-raised-button id="OpStockCost"  [routerLink]="['/Stock', {outlets: {'content1': ['HorizontalBarChart'], 'content2': 'VerticalBarChart'}}]" (click)="getTitles($event)"  routerLinkActive="active">Opening-Stock-Cost</a>
+        <a md-raised-button id="StockIn"  [routerLink]="['/Stock', {outlets: {'content1': ['HorizontalBarChart'], 'content2': 'VerticalBarChart'}}]"(click)="getTitles($event)"  routerLinkActive="active">Stock-In</a>
+        <a md-raised-button id="StockInCost"  [routerLink]="['/Stock', {outlets: {'content1': ['HorizontalBarChart'], 'TreeMap': null}}]" (click)="getTitles($event)"  routerLinkActive="active">Stock-In-Cost</a> 
+         <a md-raised-button id="PurCash"  [routerLink]="['/Stock', {outlets: {'content1': ['NumberCard'], 'content2': null}}]" (click)="getTitles($event)"  routerLinkActive="active">Purchases-Cash</a>
+        <a md-raised-button id="PurExch"  [routerLink]="['/Stock', {outlets: {'content1': ['VerticalBarChart'], 'content2': null}}]" (click)="getTitles($event)"  routerLinkActive="active">Purchases-Exch</a>       
+        <a md-raised-button id="StockOut"  [routerLink]="['/Stock', {outlets: {'content1': ['NumberCard'], 'content2': ['VerticalBarChart']}}]" (click)="getTitles($event)"  routerLinkActive="active">Stock-Out</a> 
+        <a md-raised-button id="StockOutCost"  [routerLink]="['/Stock', {outlets: {'content1': ['HorizontalBarChart'], 'content2': ['AdvancedPieChart']}}]" (click)="getTitles($event)"  routerLinkActive="active">StockOut-Cost</a>  
+        <a md-raised-button id="StockAdj"  [routerLink]="['/Stock', {outlets: {'content1': ['NumberCard'], 'content2': ['VerticalBarChart']}}]" (click)="getTitles($event)"  routerLinkActive="active">Stock-Adjustments</a> 
+        <a md-raised-button id="StockAdjCost"  [routerLink]="['/Stock', {outlets: {'content1': ['HorizontalBarChart'], 'content2': ['VerticalBarChart']}}]" (click)="getTitles($event)"  routerLinkActive="active">Stock-Adjustments-Cost</a>  
+        <a md-raised-button id="StockVar"  [routerLink]="['/Stock', {outlets: {'content1': ['NumberCard'], 'content2': ['VerticalBarChart']}}]" (click)="getTitles($event)"  routerLinkActive="active">Stock-Variances</a> 
+        <a md-raised-button id="StockVarCost"  [routerLink]="['/Stock', {outlets: {'content1': ['NumberCard'], 'content2': ['TreeMap']}}]"(click)="getTitles($event)"   routerLinkActive="active">Stock-Variances-Cost</a>  
+        <a md-raised-button id="ClosStock"  [routerLink]="['/Stock', {outlets: {'content1': ['TreeMap'], 'content2': ['VerticalBarChart']}}]"  (click)="getTitles($event)" routerLinkActive="active">Closing-Stock</a> 
+        <a md-raised-button id="ClosStockCost"  [routerLink]="['/Stock', {outlets: {'content1': ['NumberCard'], 'content2': ['TreeMap']}}]" (click)="getTitles($event)"  routerLinkActive="active">Closing-Stock-Cost</a>   
+         <a md-raised-button id="StockTurn" [routerLink]="['/Stock', {outlets: {'content1': ['NumberCard'],  'content2': ['VerticalBarChart']}}]" (click)="getTitles($event)"  routerLinkActive="active">Stock Turn</a> 
+        <a md-raised-button id="RMA"  [routerLink]="['/Stock', {outlets: {'content1': ['HorizontalBarChart'], 'content2': ['VerticalBarChart']}}]" (click)="getTitles($event)"  routerLinkActive="active">RMA</a>                              
+   </nav>  
+<table align="center">  
+        <tr> 
+        <td>   
+        <md-card class="dashboard-card">
+             <md-card-content>
+             <p class="dashboard-card-title">RMA</p>  
+            <p class="dashboard-card-content">£10,52,10.8K</p>   
+          </md-card-content> 
+       </md-card>  
+       </td>   
+          <td>      
+           <md-card class="dashboard-card">
+             <md-card-content>
+             <p class="dashboard-card-title">Opening Stock</p>  
+            <p class="dashboard-card-content">£2,58,05,46.9K</p>   
+          </md-card-content>          
+       </md-card> 
+       </td>
+       <td>
+       <md-card class="dashboard-card">
+             <md-card-content>
+             <p class="dashboard-card-title">StockIn</p>  
+            <p class="dashboard-card-content">£44,57,22.8K</p>   
+          </md-card-content> 
+       </md-card> 
+       </td>
+        <td>
+        <md-card class="dashboard-card">
+             <md-card-content>
+             <p class="dashboard-card-title">Purchases-Cash</p>  
+            <p class="dashboard-card-content">£84,77,23.8K</p>   
+          </md-card-content> 
+       </md-card> 
+        </td>    
+       <td>  
+       <md-card class="dashboard-card">
+             <md-card-content>
+             <p class="dashboard-card-title">Purchases-Exch</p>  
+            <p class="dashboard-card-content">£40,95,15.9K</p>   
+          </md-card-content> 
+           </md-card> 
+       </td>
+       <td>
+          <md-card class="dashboard-card">
+             <md-card-content>
+             <p class="dashboard-card-title">StockOut</p>  
+            <p class="dashboard-card-content">£52,10,00.1K</p>   
+          </md-card-content> 
+       </md-card> 
+       </td> 
+       </tr>   
+</table>
+<table align="center">  
+       <tr>
+        <td>
+        <md-card class="dashboard-card">
+             <md-card-content>
+             <p class="dashboard-card-title">Stock-Adjustments</p>  
+            <p class="dashboard-card-content">£62,29.4K</p>   
+          </md-card-content> 
+       </md-card>        
+      
+        </td>    
+         <td>
+        <md-card class="dashboard-card">
+             <md-card-content>
+             <p class="dashboard-card-title">Stock-Variances</p>  
+            <p class="dashboard-card-content">£54,36.1K</p>   
+          </md-card-content> 
+       </md-card> 
+        </td>  
+          <td>   
+         <md-card class="dashboard-card">
+             <md-card-content>
+             <p class="dashboard-card-title">Closing-Stock</p>  
+            <p class="dashboard-card-content">£2,97,76,51.2K</p>   
+          </md-card-content> 
+       </md-card>
+       </td>      
+           
+      </tr>       
+   </table>
+   <table border="1" width="580px" align="center" height="500px">
+      <tr>         
+          <td width="290px" align="center">
+             {{ title1 }}
+             <router-outlet name="content1">                 
+             </router-outlet>
+           </td>    
+           <td width="290px" align="center">
+              {{ title2 }}
+             <router-outlet name="content2">                 
+             </router-outlet>
+           </td>              
+      </tr>   
+  </table> 

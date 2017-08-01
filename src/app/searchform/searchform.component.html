@@ -1,0 +1,112 @@
+<h4>Dashboard - Data Visualization</h4>
+<p></p>
+ <table align="center" border="1rem" class="tblcls">
+  <thead>
+        <tr><td colspan="2" class="dashboard-search-table-title">
+         Select one or more of options below
+          </td>
+         </tr>   
+    </thead> 
+         
+      <tr><td colspan="2" class="tdcls">
+   
+     <md-radio-group>        
+      
+           <md-radio-button  [value]="Weekly">
+           Weekly
+         </md-radio-button>
+        
+         <md-radio-button  [value]="FourWeekly">
+           Four Weekly
+         </md-radio-button>
+          
+           </md-radio-group>
+         </td></tr> 
+     <tr>
+       
+       <th>Operating Company(s):</th>
+       <td align=left>
+      
+       <md-select multiple="{{true}}"  placeholder="Select Operating Company(s)" floatPlaceholder="never">
+          <md-option *ngFor="let item of OpCos" value="item">{{ item }}</md-option>    
+       </md-select>
+      </td></tr>
+      
+       <tr>
+      <th>Zone Manager(s):</th>
+       <td align=left>
+      <md-select multiple="{{true}}"  placeholder="Select Zone Manager(s)" floatPlaceholder="never" >
+        <md-option *ngFor="let item of ZoneMgrs" value="item">{{ item }}</md-option>    
+       </md-select>
+       </td></tr>
+
+       <tr>
+        <th>Store(s):</th>
+          <td align=left>  
+     <md-select multiple="{{true}}"  placeholder="Select Location(s)" floatPlaceholder="never">
+        <md-option *ngFor="let item of Stores" value="item">{{ item }}</md-option>    
+      </md-select>   
+     </td></tr>
+       <tr>
+     <th>Super Category(s):</th>
+          <td align=left>
+       <md-select multiple="{{true}}" placeholder="Select Super Category(s)" floatPlaceholder="never" >
+        <md-option *ngFor="let item of SuperCats" value="item">{{ item }}</md-option>    
+       </md-select> 
+      </td></tr>
+
+        <tr>
+         <th>Category(s):</th> 
+           <td align=left>
+        <md-select multiple="{{true}}" placeholder="Select Category(s)" floatPlaceholder="never" >
+        <md-option *ngFor="let item of Cats" value="item">{{ item }}</md-option>    
+      </md-select> 
+      </td></tr>
+
+       <tr>
+         <th>Type(s):</th> 
+          <td align=left>
+        <md-select multiple="{{true}}" placeholder="Select Type(s)" floatPlaceholder="never" >
+        <md-option *ngFor="let item of Type" value="item">{{ item }}</md-option>    
+      </md-select> 
+      </td></tr>
+    
+       <tr>
+         <th>Analysis (of):</th> 
+          <td align=left>
+        <md-select multiple="{{true}}" placeholder="Select Analysis (of)" floatPlaceholder="never" >
+        <md-option *ngFor="let item of Description" value="item">{{ item }}</md-option>    
+      </md-select> 
+      </td></tr>
+
+       <tr>
+        <th>Year(s):</th> 
+          <td align=left>
+        <md-select multiple="{{true}}" placeholder="Select Year(s)" floatPlaceholder="never">
+        <md-option *ngFor="let item of Years" value="item">{{ item }}</md-option>    
+     </md-select> 
+       </td></tr> 
+       
+
+      <tr>
+         <th>Week(s):</th>
+         <td align=left>
+       <md-select multiple="{{true}}" placeholder="Select Week(s)" floatPlaceholder="never" >
+        <md-option *ngFor="let item of Weeks" value="item">{{ item }}</md-option>    
+       </md-select> 
+    </td> </tr>
+     <tr>
+       <th>Week Ending(s):</th> 
+          <td align=left>
+      <md-select multiple="{{true}}" placeholder="Select Week Ending(s)"  floatPlaceholder="never" >
+        <md-option *ngFor="let item of WeekEndings" value="item">{{ item }}</md-option>    
+       </md-select> 
+        </td></tr>
+       <tr><td colspan="2" >      
+      <a md-raised-button  color="primary" routerLink="/KPI">Submit</a>   
+    </td></tr>   
+ 
+  </table>
+   
+
+<router-outlet></router-outlet>

@@ -1,0 +1,155 @@
+  
+<table align="center" >   
+        <tr>  
+          <td>      
+           <md-card class="dashboard-card">
+             <md-card-content>
+             <p class="dashboard-card-title">Sales</p>  
+            <p class="dashboard-card-content">£2,24,95,0.,8K</p>   
+          </md-card-content>  
+             
+       </md-card> 
+       </td>
+       <td>
+     <md-card class="dashboard-card">
+             <md-card-content>
+             <p class="dashboard-card-title">Ecom</p>  
+            <p class="dashboard-card-content">£9,48,42.3K</p>   
+          </md-card-content>     
+
+       </md-card> 
+       </td>
+        <td>
+         <md-card class="dashboard-card">
+             <md-card-content>
+             <p class="dashboard-card-title">Net Sales</p>  
+            <p class="dashboard-card-content">£2,06,95,95.8K</p>   
+          </md-card-content> 
+             </md-card> 
+        </td>
+         
+       <td>  
+       <md-card class="dashboard-card">
+             <md-card-content>
+             <p class="dashboard-card-title">Estimated Profits</p>  
+            <p class="dashboard-card-content">£81,23,56.0K</p>   
+          </md-card-content> 
+        </md-card> 
+          
+       </td>
+     <td>  
+       <md-card class="dashboard-card">
+             <md-card-content>
+             <p class="dashboard-card-title">Revenue</p>  
+            <p class="dashboard-card-content">£1,89,95,95.8K</p>   
+          </md-card-content> 
+        </md-card> 
+          
+       </td>
+       <td>
+          <md-card class="dashboard-card">
+             <md-card-content>
+             <p class="dashboard-card-title">Memberships</p>  
+            <p class="dashboard-card-content">88,46,017</p>   
+          </md-card-content> 
+         </md-card> 
+       </td>
+                   
+      </tr>       
+   </table>
+  
+  <table width="680px" >
+
+  <tr><td width="680px" height="120px">
+      <table align="center" border="1rem" >
+    
+      <tr>        
+          <td width="300px" align="center">
+            {{ title1 }}
+             <router-outlet name="content1">                 
+             </router-outlet>
+           </td>    
+           <td width="380x" align="center">
+             {{ title2 }}
+             <router-outlet name="content2">                 
+             </router-outlet>
+           </td>              
+      </tr>   
+  </table>
+</td></tr>
+
+<tr><td width="680px" height="120px"  >
+
+<table width="400px"  align="left" >
+    
+    <tr>
+    <td class="tdcls" width="200px"  >
+     <table width="200px" border="1rem"  >
+    <thead>
+        <tr class="dashboard-table-title" >
+            <td>Top 10 Op Co.</td>
+            <td> Sales</td>          
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of rowOpCo" class="dashboard-table-content" >  
+            <td class='dtTbl'>{{row.name}}</td>
+            <td class='dtTbl'>£{{row.value}}</td>          
+        </tr>
+    </tbody>
+   </table> 
+    </td> 
+ 
+    <td class="tdcls" width="180px" >
+    <table width="180px"  border="1rem" >
+    <thead>
+        <tr class="dashboard-table-title">
+            <td>Top 10 Stores</td>
+            <td>Sales</td>          
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of rowStores" class="dashboard-table-content">
+            <td class='dtTbl'>{{row.name}}</td>
+            <td class='dtTbl'>£{{row.value}}</td>          
+        </tr>
+    </tbody>
+</table>     
+  </td> 
+
+     <td class="tdcls" width="200px" >
+       <table width="200px"  border="1rem"> 
+    <thead>
+        <tr class="dashboard-table-title">
+            <td>Top 10 Zone Managers</td>
+            <td>Sales</td>          
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of rowZoneMgr" class="dashboard-table-content">
+            <td class='dtTbl'>{{row.name}}</td>
+            <td class='dtTbl'>£{{row.value}}</td>          
+        </tr>
+    </tbody>
+</table>      
+    </td> 
+
+     <td width="100px" style="vertical-align: top;"> 
+     <table width="100px" border="1rem"> 
+     <tr>
+     <td style="vertical-align: top;" >         
+     {{ title3 }}
+             <router-outlet>                 
+             </router-outlet>
+     </td>
+     </tr> 
+   </table>        
+    </td>
+  </tr>
+
+</table> 
+
+
+
+
+ 

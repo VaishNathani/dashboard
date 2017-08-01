@@ -1,0 +1,133 @@
+body{
+  font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+  text-align: center;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0.01rem;
+  color:white;
+  background-color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  margin:0px;
+ }
+
+.axis text {
+  fill: gray;
+}
+
+.tick text {
+  fill: gray;
+} 
+
+table
+{
+  margin: 0px, 0px, 0px, 0px ;
+  align-content: center;  
+}
+
+td
+{
+  margin: 0px, 0px, 0px, 0px ;
+  column-gap: 0px;
+}
+.app{
+    height: 100vh;   
+}
+
+.md-toolbar {
+  z-index: 10; 
+  }
+
+
+.md-sidenav {
+    width: 10vw; 
+    
+     }
+
+
+.tab-actions{
+    display: inline-block;    
+    position: fixed;
+    bottom: 20px;
+    right: 20px;    
+}
+
+.dashboard-card {
+  width: 142px;
+  height: 55px;
+  text-align: center;
+  font-style: normal;
+ }
+
+.dashboard-card-title {
+  font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+  text-align: center;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 1.0rem;
+  line-height: 1.0rem;
+  letter-spacing: 0.01rem;
+  color: white ;
+}
+
+
+.dashboard-card-content {
+  font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+  text-align: center;
+  font-style: normal;
+  font-weight: 250;
+  font-size: 1.3rem;
+  line-height: 1.0rem;
+  letter-spacing: 0.01rem;
+  color: #FF7043;
+}
+
+.dashboard-table-title {
+  font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+  text-align: left;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.75rem;
+  line-height: 1.0rem;
+  letter-spacing: 0.01rem;
+  color: white;
+  border-bottom: thin solid white;
+  background-color: red; 
+ 
+} 
+
+
+.dashboard-search-table-title{
+  font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+  text-align: left;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 2.0rem;
+  letter-spacing: 0.01rem;
+  color: black;
+  border-bottom: thin solid white;
+  background-color:palegreen;  
+} 
+
+.menubtn{
+  width: 150px; 
+  background-color:#607D8B ; 
+}
+
+.dashboard-table-content {
+  font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+  text-align: left;
+  font-style: normal;
+  font-weight: 250;
+  font-size: 0.75rem;
+  line-height: 1.3rem;
+  letter-spacing: 0.01rem; 
+  color: wheat;
+  }
+  
+
+

@@ -1,0 +1,82 @@
+  <nav md-tab-nav-bar>     
+        <a id="Sales"  md-raised-button [routerLink]="['/Sales',  {outlets: {'content1': ['NumberCard'],  'content2': ['VerticalBarChart']}}]"  (click)="getTitles($event)" routerLinkActive="active">Sales</a> 
+        <a id="SalesCash" md-raised-button [routerLink]="['/Sales', {outlets: {'content1': ['HorizontalBarChart'],'content2': null}}]" routerLinkActive="active" (click)="getTitles($event)" >Sales-Cash</a>
+        <a id="SalesCard" md-raised-button [routerLink]="['/Sales', {outlets: {'content1': ['TreeMap'], 'content2': null }}]" routerLinkActive="active" (click)="getTitles($event)" >Sales-Card</a>
+        <a id="SalesCheque" md-raised-button [routerLink]="['/Sales', {outlets: {'content1': ['NumberCard'], 'content2': null}}]" routerLinkActive="active" (click)="getTitles($event)" >Sales-Cheque</a>
+        <a id="SalesExch" md-raised-button [routerLink]="['/Sales', {outlets: {'content1': ['VerticalBarChart'], 'content2': null}}]"  routerLinkActive="active" (click)="getTitles($event)" >Sales-Exchange</a>    
+        <a id="NetSales" md-raised-button [routerLink]="['/Sales', {outlets: {'content1': ['NumberCard'], 'content2': ['VerticalBarChart']}}]" routerLinkActive="active" (click)="getTitles($event)">Net Sales</a>                  
+   </nav>   
+   
+   <table align="center">   
+        <tr>  
+          <td>      
+           <md-card class="dashboard-card">
+             <md-card-content>
+             <p class="dashboard-card-title">Sales</p>  
+            <p class="dashboard-card-content">£2,24,95,07.8K</p>   
+          </md-card-content>          
+       </md-card> 
+       </td>
+       <td>
+       <md-card class="dashboard-card">
+             <md-card-content>
+             <p class="dashboard-card-title">Sales-Cash</p>  
+            <p class="dashboard-card-content">£1,08,77,81.6K</p>   
+          </md-card-content> 
+       </md-card> 
+       </td>
+        <td>
+        <md-card class="dashboard-card">
+             <md-card-content>
+             <p class="dashboard-card-title">Sales-Card</p>  
+            <p class="dashboard-card-content">£72,40,30.4K</p>   
+          </md-card-content> 
+       </md-card> 
+        </td>
+         
+       <td>  
+       <md-card class="dashboard-card">
+             <md-card-content>
+             <p class="dashboard-card-title">Sales-Cheque</p>  
+            <p class="dashboard-card-content">£12.6K</p>   
+          </md-card-content> 
+           </md-card> 
+       </td>
+       <td>
+          <md-card class="dashboard-card">
+             <md-card-content>
+             <p class="dashboard-card-title">Sales-Exchange</p>  
+            <p class="dashboard-card-content">£49,26,72.9K</p>   
+          </md-card-content> 
+       </md-card> 
+       </td>
+          <td>
+        <md-card class="dashboard-card">
+             <md-card-content>
+             <p class="dashboard-card-title">Net Sales</p>  
+            <p class="dashboard-card-content">£2,24,95,07.8K</p>   
+          </md-card-content> 
+       </md-card>        
+      
+        </td>    
+           
+      </tr>       
+   </table>
+ 
+  <table border="1rem" width="580px" align="center" height="500px">
+    
+      <tr>        
+          <td width="290px" align="center">
+            {{ title1 }}
+             <router-outlet name="content1">                 
+             </router-outlet>
+           </td>    
+           <td width="290px" align="center">
+             {{ title2 }}
+             <router-outlet name="content2">                 
+             </router-outlet>
+           </td>              
+      </tr>   
+  </table> 
+       
+             

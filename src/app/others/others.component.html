@@ -1,0 +1,27 @@
+ <nav md-tab-nav-bar> 
+       <a md-raised-button id="SCatQty" [routerLink]="['/Others', {outlets: {'content1': ['PieChart'], 'content2': 'AdvancedPieChart/supercatsalesval'}}]" (click)="getTitles($event)"  routerLinkActive="active">SuperCat Performance</a>
+       <a md-raised-button id="SCatDate" [routerLink]="['/Others', {outlets: {'content1': ['StackedAreaChart'], 'content2': null}}]" (click)="getTitles($event)"  routerLinkActive="active">SuperCat Performance (Date)</a>
+       <a md-raised-button id="YearwiseOpco" [routerLink]="['/Others', {outlets: {'content1': ['NormalizedHorizontalBarChart'], 'content2': null}}]" (click)="getTitles($event)"  routerLinkActive="active">OperatingCo. Contribution</a>
+       <a md-raised-button id="YearwiseZoneMgr" [routerLink]="['/Others', {outlets: {'content1': ['NormalizedVerticalBarChart'], 'content2': null}}]" (click)="getTitles($event)"  routerLinkActive="active">Zone Manager Contribution</a>
+       <a md-raised-button id="YearwiseStores" [routerLink]="['/Others', {outlets: {'content1': ['StackedVerticalBarChart'], 'content2': null}}]" (click)="getTitles($event)"  routerLinkActive="active">Stores Contribution</a>
+       <a md-raised-button id="ScatsProfits" [routerLink]="['/Others', {outlets: {'content1': ['StackedHorizontalBarChart'], 'content2': null}}]" (click)="getTitles($event)"  routerLinkActive="active">Profits by SuperCat</a>
+ </nav>        
+
+   <table border="1rem" width="580px" align="center" height="500px">
+      <tr>         
+          <td width="290px" align="center">
+            {{ title1 }}
+             <router-outlet name="content1">                 
+             </router-outlet>
+           </td> 
+            <td width="290px" align="center">
+            {{ title2 }}
+             <router-outlet name="content2">                 
+             </router-outlet>
+           </td>                   
+      </tr>   
+  </table> 
+
+ 
+
+      

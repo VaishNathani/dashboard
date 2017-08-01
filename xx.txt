@@ -1,0 +1,26 @@
+md-select[multiple] {
+._md-container {
+display: inline-block;
+}
+}
+ border-bottom: thin solid white; 
+
+
+<tr height="90px"><td></td></tr>
+    
+    <tr> 
+
+#607D8B
+
+kpi
+
+this.urlTree = router.createUrlTree(['/KPI', {outlets: {content1: 'LineChart', content2: 'GroupedVerticalBarChart'}}]);
+    router.navigateByUrl(this.urlTree);
+
+    this.urlTree = router.createUrlTree(['/KPI', {outlets: {primary: 'VerticalBarChart/stockturnYears'}}]);
+    router.navigateByUrl(this.urlTree);
+
+others
+
+this.urlTree = router.createUrlTree(['/Others', {outlets: {content1: 'PieChart', content2: 'AdvancedPieChart/supercatsalesval' }}]);
+router.navigateByUrl(this.urlTree);
