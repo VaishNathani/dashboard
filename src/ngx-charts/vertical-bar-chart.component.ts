@@ -58,7 +58,7 @@ export class VerticalBarChartComponent {
   this.id = this.route.snapshot.params['id'];
 
 
-  console.log(this.route);
+ 
  
  if (this.id === 'stockturnYears')    
   {
@@ -73,8 +73,6 @@ export class VerticalBarChartComponent {
   }   
     
   }
-  
-  onSelect(event) {
-    console.log(event);
-  }
+ 
+ 
 }
