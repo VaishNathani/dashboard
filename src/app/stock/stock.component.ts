@@ -1,18 +1,19 @@
-import { Component, NgModule, Input } from '@angular/core';
+import { Component, NgModule, Input, DoCheck } from '@angular/core';
 import { Router, ActivatedRoute  } from '@angular/router';
+import { RMAHeader1, RMAHeader2} from '../common/common.module';
 
 @Component({
    templateUrl : './stock.component.html'
   })
-export class StockComponent {
+export class StockComponent implements DoCheck {
 
  title1 : string = ' ';
  title2 : string = ' ';
  urlTree : any = ' ';
 
  constructor(private router: Router, private activeRoute: ActivatedRoute) {
-      this.title1 = 'Opening Stock - Quantity';
-      this.title2 = 'Opening Stock - Value';
+      this.title1 = RMAHeader1;
+      this.title2 = RMAHeader2;
       this.urlTree = this.router.createUrlTree(['/Stock', {outlets: {content1: 'HorizontalBarChart', content2: 'VerticalBarChart'}}]);
       this.router.navigateByUrl(this.urlTree); 
           
@@ -31,8 +32,6 @@ var id : string = event.srcElement.offsetParent.id;
     case "OpStock":
           this.title1 = 'Opening Stock - Quantity';
           this.title2 = 'Opening Stock - Value';
-           this.urlTree = this.router.createUrlTree(['/Stock', {outlets: {content1: 'HorizontalBarChart', content2: 'VerticalBarChart'}}]);
-           this.router.navigateByUrl(this.urlTree); 
           break;
     case "OpStockCost":
           this.title1 = 'Opening Stock Cost - Quantity';
@@ -87,8 +86,8 @@ var id : string = event.srcElement.offsetParent.id;
            this.title2 = 'Closing Stock Cost - Value';
            break; 
     case "RMA":
-           this.title1 = 'RMA - Quantity';
-           this.title2 = 'RMA - Value';
+           this.title1 = RMAHeader1;
+           this.title2 = RMAHeader2;
            break; 
      case "StockTurn":
            this.title1 = 'Stock Turn - Quantity';
@@ -101,4 +100,17 @@ var id : string = event.srcElement.offsetParent.id;
    }
   }
 
+  ngDoCheck(){
+  
+   var linkId: string = ' ';
+
+   linkId = this.activeRoute.snapshot.queryParams['linkID'];  
+
+   if (linkId === 'RMA')
+      {
+        this.title1 = RMAHeader1;
+        this.title2 = RMAHeader2;
+      }     
+    
+}
 }

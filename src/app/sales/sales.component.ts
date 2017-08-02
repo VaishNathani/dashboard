@@ -1,13 +1,14 @@
-import { Component, NgModule, Input } from '@angular/core';
+import { Component, NgModule, Input, DoCheck } from '@angular/core';
 import {MdCardModule} from '@angular/material';
 import { Router, ActivatedRoute  } from '@angular/router';
+import {salesHeader1, salesHeader2} from '../common/common.module';
 
 @Component({
   templateUrl : './sales.component.html'
 })
 
 
-export class SalesComponent {
+export class SalesComponent implements DoCheck {
  
  title1 : string = ' ';
  title2 : string = ' ';
@@ -15,8 +16,8 @@ export class SalesComponent {
  urlTree : any = ' ';
 
 constructor(private router: Router, private activeRoute: ActivatedRoute) {
-       this.title1 = 'Sales - Quantity';
-       this.title2 = 'Sales - Value';
+       this.title1 = salesHeader1;
+       this.title2 = salesHeader2;
        this.urlTree = this.router.createUrlTree(['/Sales', {outlets: {content1: 'NumberCard', content2: 'VerticalBarChart'}}]);
        this.router.navigateByUrl(this.urlTree);
       
@@ -34,10 +35,8 @@ var id : string = event.srcElement.offsetParent.id;
  switch(id)
    {
     case "Sales":
-          this.title1 = 'Sales - Quantity';
-          this.title2 = 'Sales - Value';
-          this.urlTree = this.router.createUrlTree(['/Sales', {outlets: {content1: 'NumberCard', content2: 'VerticalBarChart'}}]);
-          this.router.navigateByUrl(this.urlTree);
+          this.title1 = salesHeader1;
+          this.title2 = salesHeader2;
           break;
     case "SalesCash":
           this.title1 = 'Sales - Cash';
@@ -64,8 +63,18 @@ var id : string = event.srcElement.offsetParent.id;
           this.title2 = ' ';
           break;
    }
+}
 
-   
+  ngDoCheck(){
+  
+   var linkId: string = ' ';
 
+   linkId = this.activeRoute.snapshot.queryParams['linkID'];  
+
+   if (linkId === 'Sales')
+      {
+       this.title1 = salesHeader1;
+       this.title2 = salesHeader2;
+      }     
   }
 }

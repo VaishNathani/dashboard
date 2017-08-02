@@ -97,6 +97,16 @@ const appRoutes: Routes = [
   { path: 'Ecom',  component: EcomComponent,
 
     children: [
+              {
+                 path: '',
+                 component: HorizontalBarChartComponent,
+                 outlet: 'content1'
+               },
+                {
+                 path: '',
+                 component: VerticalBarChartComponent,
+                 outlet: 'content2'
+               },          
                {
                  path: 'HorizontalBarChart',
                  component: HorizontalBarChartComponent,

@@ -18,44 +18,43 @@
      <nav md-tab-nav-bar>  
 
        <md-nav-list>  
-        <a md-raised-button  id="stockturnYears" class="menubtn"  routerLink="/KPI" (click)="getTitles($event)"  routerLinkActive="active">Key Metrics</a>
+        <a md-raised-button  id="stockturnYears" class="menubtn"  routerLink="/KPI" [queryParams]="{linkID: 'stockturnYears'}" queryParamsHandling="merge"  routerLinkActive="active">Key Metrics</a>
        </md-nav-list>
 
        <md-nav-list> 
-        <a md-raised-button id="SCatQty" class="menubtn" routerLink="/Others" (click)="getTitles($event)"  routerLinkActive="active">Varied Analysis</a> 
+        <a md-raised-button id="SCatQty" class="menubtn" [routerLink]="['/Others', {outlets: {'content1': ['PieChart'], 'content2': 'AdvancedPieChart/supercatsalesval'}}]" [queryParams]="{linkID: 'SCatQty'}" queryParamsHandling="merge"  routerLinkActive="active">Varied Analysis</a> 
        </md-nav-list> 
      
-
-      <md-nav-list>  
-       <a  md-raised-button id="Sales" class="menubtn" routerLink="/Sales" (click)="getTitles($event)"  routerLinkActive="active">Sales</a>
+       <md-nav-list>  
+       <a  md-raised-button id="Sales" class="menubtn" [routerLink]="['/Sales',  {outlets: {'content1': ['NumberCard'],  'content2': ['VerticalBarChart']}}]" [queryParams]="{linkID: 'Sales'}" queryParamsHandling="merge" routerLinkActive="active">Sales</a>
       </md-nav-list>
 
        <md-nav-list>   
-       <a md-raised-button  id="Ecom" class="menubtn" routerLink="/Ecom" (click)="getTitles($event)"  routerLinkActive="active">E-Com</a>
+       <a md-raised-button  id="Ecom" class="menubtn" [routerLink]="['/Ecom', {outlets: {'content1': ['HorizontalBarChart'], 'content2': ['VerticalBarChart']}}]"  [queryParams]="{linkID: 'Ecom'}" queryParamsHandling="merge"  routerLinkActive="active">E-Com</a>
       </md-nav-list> 
 
        <md-nav-list>   
-       <a md-raised-button id="Refunds" class="menubtn" routerLink="/Refunds" (click)="getTitles($event)"  routerLinkActive="active">Refunds</a>
+       <a md-raised-button id="Refunds" class="menubtn" [routerLink]="['/Refunds', {outlets: {'content1': ['NumberCard'], 'content2': ['TreeMap']}}]"  [queryParams]="{linkID: 'Refunds'}" queryParamsHandling="merge"  routerLinkActive="active">Refunds</a>
       </md-nav-list>
 
        <md-nav-list>  
-       <a md-raised-button id="EstProfits" class="menubtn" routerLink="/EstimatedProfits" routerLinkActive="active">Estimated Profits</a>
+       <a md-raised-button id="EstProfits" class="menubtn" [routerLink]="['/EstimatedProfits', {outlets: {'content1': ['HorizontalBarChart'], 'content2': ['VerticalBarChart']}}]" [queryParams]="{linkID: 'EstProfits'}" queryParamsHandling="merge" routerLinkActive="active">Estimated Profits</a>
       </md-nav-list> 
 
        <md-nav-list> 
-        <a md-raised-button id="RMA" class="menubtn" routerLink="/Stock" (click)="getTitles($event)"  routerLinkActive="active">Stock</a>
+        <a md-raised-button id="RMA" class="menubtn" [routerLink]="['/Stock', {outlets: {'content1': ['NumberCard'],  'content2': ['VerticalBarChart']}}]"  [queryParams]="{linkID: 'RMA'}" queryParamsHandling="merge" routerLinkActive="active">Stock</a>
       </md-nav-list> 
 
       <md-nav-list>  
-          <a md-raised-button id="Memberships" class="menubtn" routerLink="/Memberships" (click)="getTitles($event)"  routerLinkActive="active">Memberships</a>
+          <a md-raised-button id="Memberships" class="menubtn" [routerLink]="['/Memberships', {outlets: {'content1': ['AdvancedPieChart'], 'content2': null}}]"  [queryParams]="{linkID: 'Memberships'}" queryParamsHandling="merge" routerLinkActive="active">Memberships</a>
        </md-nav-list>
 
        <md-nav-list>   
-       <a md-raised-button  id="GiftVch" class="menubtn" routerLink="/GiftVouchers"  (click)="getTitles($event)"  routerLinkActive="active">Gift Vouchers</a>
+       <a md-raised-button  id="GiftVch" class="menubtn" [routerLink]="['/GiftVouchers', {outlets: {'content1': ['NumberCard'], 'content2': ['TreeMap']}}]"  [queryParams]="{linkID: 'GiftVch'}" queryParamsHandling="merge"  routerLinkActive="active">Gift Vouchers</a>
        </md-nav-list>  
 
       <md-nav-list>    
-      <a md-raised-button id="Donations"  class="menubtn" routerLink="/Donation" (click)="getTitles($event)"  routerLinkActive="active">Donation</a>
+      <a md-raised-button id="Donations"  class="menubtn" [routerLink]="['/Donation', {outlets: {'content1': ['NumberCard'], 'content2': ['TreeMap']}}]"  [queryParams]="{linkID: 'Donations'}" queryParamsHandling="merge"  routerLinkActive="active">Donation</a>
       </md-nav-list> 
      
        </nav> 
@@ -69,7 +68,7 @@
     </md-sidenav>
    
 <router-outlet></router-outlet>
- </md-sidenav-container>
+  </md-sidenav-container>
 </section>
 
 

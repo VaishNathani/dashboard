@@ -1,10 +1,12 @@
-import { Component, NgModule, Input, OnInit } from '@angular/core';
+import { Component, NgModule, Input } from '@angular/core';
 import { RouterModule,  ActivatedRoute, Router  } from '@angular/router';
 import {MdGridListModule, MdListModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { rowOpCo, rowStores, rowZoneMgr } from '../../ngx-charts/data';
 import {Observable} from "../../../node_modules/rxjs";
+import {kpiHeader1, kpiHeader2, kpiHeader3} from '../common/common.module';
 import { } from '@types/node';
+
 
 
 
@@ -13,7 +15,7 @@ import { } from '@types/node';
     styles: [ require('./kpi.component.scss').toString() ]
 })
   
-export class KPIComponent implements OnInit {
+export class KPIComponent {
 
   rowOpCo: any[] = [];
   rowStores: any[] = [];
@@ -27,9 +29,9 @@ export class KPIComponent implements OnInit {
 
 constructor(private activeRoute: ActivatedRoute, private router: Router) {
   
-        this.title1 = 'Sales Instore vs Ecom (Of which is)';
-        this.title2 =  "SuperCat Sales Performance (For given Date Period)";
-        this.title3 = 'Stock Turn (Yearly Comparison)';
+        this.title1 = kpiHeader1;
+        this.title2 = kpiHeader2;
+        this.title3 = kpiHeader3;
         Object.assign(this, {rowOpCo, rowStores, rowZoneMgr});
 
         this.rowOpCo = rowOpCo;   
@@ -50,9 +52,9 @@ getTitles(event)
   var id : string = event.srcElement.offsetParent.id;
 
  
-        this.title1 = 'Sales Instore vs Ecom (Of which is)';
-        this.title2 =  "SuperCat Sales Performance (For given Date Period)";
-        this.title3 = 'Stock Turn (Yearly Comparison)';
+        this.title1 = kpiHeader1;
+        this.title2 = kpiHeader2;
+        this.title3 = kpiHeader3;
         Object.assign(this, {rowOpCo, rowStores, rowZoneMgr});
 
         this.rowOpCo = rowOpCo;   
@@ -67,10 +69,7 @@ getTitles(event)
   
 
 }
-ngOnInit() { 
 
-   
-  }
 }
 
 

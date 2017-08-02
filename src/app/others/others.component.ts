@@ -1,24 +1,30 @@
-import { Component, NgModule, Input } from '@angular/core';
+import { Component, NgModule, Input, OnInit, DoCheck } from '@angular/core';
 import { Router, ActivatedRoute  } from '@angular/router';
+import {othersHeader1, othersHeader2} from '../common/common.module';
+
+
 
 
 @Component({
   templateUrl : './others.component.html'
  
   })
-export class OthersComponent {
+export class OthersComponent implements DoCheck {
 
    title1 : string = ' ';
    title2 : string = ' ';
    urlTree : any =  ' ';
 
    constructor(private router: Router, private activeRoute: ActivatedRoute) {
+   
+         
+          this.title1 =  othersHeader1;
+          this.title2 =  othersHeader2;
 
-          this.title1 = 'Sales Comparison by SuperCat- Quantity ';
-          this.title2 = 'Sales Comparison by SuperCat - Value ';
           this.urlTree = this.router.createUrlTree(['/Others', {outlets: {content1: 'PieChart', content2: 'AdvancedPieChart/supercatsalesval' }}]);
           this.router.navigateByUrl(this.urlTree);
-             
+           
+ 
 }
  
 
@@ -29,14 +35,12 @@ export class OthersComponent {
  this.title2 = ' ';
 
 var id : string = event.srcElement.offsetParent.id;
-
+  
  switch(id)
    {
     case "SCatQty":
-          this.title1 = 'Sales Comparison by SuperCat- Quantity ';
-          this.title2 = 'Sales Comparison by SuperCat - Value ';
-          this.urlTree = this.router.createUrlTree(['/Others', {outlets: {content1: 'PieChart', content2: 'AdvancedPieChart/supercatsalesval' }}]);
-          this.router.navigateByUrl(this.urlTree);
+          this.title1 =  othersHeader1;
+          this.title2 =  othersHeader2;
           break;
      case "SCatVal":
           this.title1 = 'Sales Comparison by SuperCat - Value ';
@@ -69,6 +73,21 @@ var id : string = event.srcElement.offsetParent.id;
    }
 
    
+}
+
+ngDoCheck(){
+  
+   var linkId: string = ' ';
+
+   linkId = this.activeRoute.snapshot.queryParams['linkID'];  
+
+   if (linkId === 'SCatQty')
+      {
+        this.title1 =  othersHeader1;
+        this.title2 =  othersHeader2;
+      
+      }     
+    
 }
 }
 
