@@ -3,8 +3,6 @@ import { Router, ActivatedRoute  } from '@angular/router';
 import {othersHeader1, othersHeader2} from '../common/common.module';
 
 
-
-
 @Component({
   templateUrl : './others.component.html'
  
@@ -85,7 +83,7 @@ ngDoCheck(){
       {
         this.title1 =  othersHeader1;
         this.title2 =  othersHeader2;
-      
+    
       }     
     
 }

@@ -2,7 +2,7 @@
         <a md-raised-button id="OpStock" [routerLink]="['/Stock', {outlets: {'content1': ['NumberCard'],  'content2': ['VerticalBarChart']}}]" (click)="getTitles($event)"  routerLinkActive="active">Opening Stock</a> 
         <a md-raised-button id="OpStockCost"  [routerLink]="['/Stock', {outlets: {'content1': ['HorizontalBarChart'], 'content2': 'VerticalBarChart'}}]" (click)="getTitles($event)"  routerLinkActive="active">Opening-Stock-Cost</a>
         <a md-raised-button id="StockIn"  [routerLink]="['/Stock', {outlets: {'content1': ['HorizontalBarChart'], 'content2': 'VerticalBarChart'}}]"(click)="getTitles($event)"  routerLinkActive="active">Stock-In</a>
-        <a md-raised-button id="StockInCost"  [routerLink]="['/Stock', {outlets: {'content1': ['HorizontalBarChart'], 'TreeMap': null}}]" (click)="getTitles($event)"  routerLinkActive="active">Stock-In-Cost</a> 
+        <a md-raised-button id="StockInCost"  [routerLink]="['/Stock', {outlets: {'content1': ['HorizontalBarChart'], 'content2': 'TreeMap'}}]" (click)="getTitles($event)"  routerLinkActive="active">Stock-In-Cost</a> 
          <a md-raised-button id="PurCash"  [routerLink]="['/Stock', {outlets: {'content1': ['NumberCard'], 'content2': null}}]" (click)="getTitles($event)"  routerLinkActive="active">Purchases-Cash</a>
         <a md-raised-button id="PurExch"  [routerLink]="['/Stock', {outlets: {'content1': ['VerticalBarChart'], 'content2': null}}]" (click)="getTitles($event)"  routerLinkActive="active">Purchases-Exch</a>       
         <a md-raised-button id="StockOut"  [routerLink]="['/Stock', {outlets: {'content1': ['NumberCard'], 'content2': ['VerticalBarChart']}}]" (click)="getTitles($event)"  routerLinkActive="active">Stock-Out</a> 
