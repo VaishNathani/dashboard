@@ -5,8 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "webpack-dev-server --port=4200",
-    "build": "webpack",
-    "build:prod": "webpack -p",
+    "build": "webpack -p",
     "test": "karma start ./karma.conf.js",
     "lint": "ng lint",
     "e2e": "protractor ./protractor.conf.js",
@@ -40,6 +39,7 @@
     "@types/jasmine": "2.5.45",
     "@types/node": "^6.0.85",
     "autoprefixer": "^6.5.3",
+    "base-href-webpack-plugin": "^1.0.2",
     "codelyzer": "~3.0.1",
     "css-loader": "^0.28.1",
     "cssnano": "^3.10.0",
