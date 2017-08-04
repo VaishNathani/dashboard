@@ -16,7 +16,7 @@ const realNodeModules = fs.realpathSync(nodeModules);
 const genDirNodeModules = path.join(process.cwd(), 'src', '$$_gendir', 'node_modules');
 const entryPoints = ["inline","polyfills","sw-register","scripts","styles","vendor","main"];
 const minimizeCss = false;
-const baseHref = "/dashboard/";
+const baseHref = "";
 const deployUrl = "";
 const postcssPlugins = function () {
         // safe settings based on: https://github.com/ben-eb/cssnano/issues/358#issuecomment-283696193
