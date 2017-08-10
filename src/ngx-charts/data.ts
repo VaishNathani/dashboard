@@ -87,7 +87,7 @@ export var multi = [
   },
 
   {
-    "name": "Gaming",
+    "name": "Games",
     "series": [
       {
         "name": "2017",
@@ -101,7 +101,7 @@ export var multi = [
   },
 
   {
-    "name": "DVD",
+    "name": "Digital",
     "series": [
       {
         "name": "2017",
@@ -114,7 +114,7 @@ export var multi = [
     ]
   },
    {
-    "name": "Phones",
+    "name": "Mobiles",
     "series": [
       {
         "name": "2017",
@@ -131,7 +131,7 @@ export var multi = [
 
 export var opcoyearsval = [
   {
-    "name": "A & M Tech Limited",
+    "name": "L & V Tech Limited",
     "series": [
       {
         "name": "2017",
@@ -149,7 +149,7 @@ export var opcoyearsval = [
   },
 
   {
-    "name": "A J Digital Entertainment Ltd",
+    "name": "L & B Digital",
     "series": [
       {
         "name": "2017",
@@ -167,7 +167,7 @@ export var opcoyearsval = [
   },
 
   {
-    "name": "Copsey Perkins Ltd",
+    "name": "Doro Perkins Ltd",
     "series": [
      {
         "name": "2017",
@@ -205,7 +205,7 @@ export var supercatyearsval = [
   },
 
   {
-    "name": "Gaming",
+    "name": "Games",
     "series": [
       {
         "name": "2017",
@@ -223,7 +223,7 @@ export var supercatyearsval = [
   },
 
   {
-    "name": "Phones",
+    "name": "Mobiles",
     "series": [
      {
         "name": "2017",
@@ -240,7 +240,7 @@ export var supercatyearsval = [
     ]
   },
     {
-    "name": "DVD",
+    "name": "Digital",
     "series": [
      {
         "name": "2017",
@@ -319,7 +319,7 @@ export var storeyearsval = [
 
 export var zoneyearsval = [
   {
-    "name": "Cian Evan Gaffney",
+    "name": "Avanti Garde",
     "series": [
       {
         "name": "2017",
@@ -337,7 +337,7 @@ export var zoneyearsval = [
   },
 
   {
-    "name": "Bartosz Radziszewski",
+    "name": "Florence Mai",
     "series": [
       {
         "name": "2017",
@@ -355,7 +355,7 @@ export var zoneyearsval = [
   },
 
   {
-    "name": "Andrew Rowles",
+    "name": "Mike Rowles",
     "series": [
      {
         "name": "2017",
@@ -437,15 +437,15 @@ export var supercatsalesval = [
     "value": 3398014.51
   },
   {
-    "name": "DVD",
+    "name": "Digital",
     "value": 2595728.19
   },
   {
-    "name": "Electronics",
+    "name": "Gadgets",
     "value": 1908772.50
   },
   {
-    "name": "Gaming",
+    "name": "Games",
     "value": 12849138.71
   },
   {
@@ -457,7 +457,7 @@ export var supercatsalesval = [
     "value": 135783.72
   },
   {
-    "name": "Phones",
+    "name": "Mobiles",
     "value": 8355344.18
   }
 ];
@@ -468,15 +468,15 @@ export var supercatsalesqty = [
     "value": 	35458
   },
   {
-    "name": "DVD",
+    "name": "Digital",
     "value": 1018875
   },
   {
-    "name": "Electronics",
+    "name": "Gadgets",
     "value": 	35470
   },
   {
-    "name": "Gaming",
+    "name": "Games",
     "value": 	1003599
   },
   {
@@ -488,7 +488,7 @@ export var supercatsalesqty = [
     "value": 	92525
   },
   {
-    "name": "Phones",
+    "name": "Mobiles",
     "value": 	77341
   }
 ];
@@ -522,7 +522,7 @@ export var supercatdatecomp = [
     ]
   },
   {
-    "name": "DVD",
+    "name": "Digital",
     "series": [
       {
         "value": 6421,
@@ -547,7 +547,7 @@ export var supercatdatecomp = [
     ]
   },
   {
-    "name": "Electronics",
+    "name": "Gadgets",
     "series": [
       {
         "value": 5452,
@@ -572,7 +572,7 @@ export var supercatdatecomp = [
     ]
   },
   {
-    "name": "Gaming",
+    "name": "Games",
     "series": [
       {
         "value": 4125,
@@ -622,7 +622,7 @@ export var supercatdatecomp = [
     ]
   },
    {
-    "name": "Phones",
+    "name": "Mobiles",
     "series": [
       {
         "value": 3125,
@@ -750,45 +750,45 @@ export var xrows = [
 
 export var rowZoneMgr = [
   {
-    name : 'Andrew Rowles',
+    name : 'Mike Rowles',
     value: '960000'
   },
   {
-    name: 'Barry Cassells',
+    name: 'Garry Castle',
     value: '950000'
   },
  {
-    name: 'Jaspal Singh',
+    name: 'Jaspal Paul',
     value: '940000'
   },
   
   {
-    name: 'Cian Evan Gaffney',
+    name: 'Avanti Garde',
     value: '870000'
   },
    {
-    name: 'Craig Mowbray',
+    name: 'Camy Murray',
     value: '850000'
   },
   {
-    name: 'James Bewick',
+    name: 'Jamie Bewich',
     value: '840000'
   },
    {
-    name: 'Jonathan Easter',
+    name: 'Jonathan Cassels',
     value: '800000'
   },
   
   {
-    name: 'Shaun Gavin',
+    name: 'Shaun Hunter',
     value: '800000'
   },
    {
-    name: 'Shaun Graham',
+    name: 'Shaun Griff',
     value: '780000'
   },
   {
-    name: 'Simon Heldreich',
+    name: 'Simon Gary',
     value: '760000'
   }
   
@@ -798,43 +798,43 @@ export var rowZoneMgr = [
 
 export var rowOpCo = [
   {
-     name : 'A & M Tech Limited',
+     name : 'L & V Tech Limited',
     value: '900000'
   },
   {
-    name: 'BEX Gaming Ltd',
+    name: 'Gary Games Ltd',
     value: '850000'
   },
   {
-    name: 'A.G.O Parker limited',
+    name: 'P.G.O Simon limited',
     value: '840000'
   },
    {
-    name: 'Copsey Perkins Ltd',
+    name: 'Copsey Marty Ltd',
     value: '830000'
   },
    {
-    name: 'Boult Ltd.',
+    name: 'Boulder Ltd.',
     value: '800000'
   },
   {
-    name: 'JHB Technology Ltd',
+    name: 'PKN Technology Ltd',
     value: '790000'
   },
    {
-    name: 'KL Traders LTD',
+    name: 'MT Traders LTD',
     value: '770000'
   },
   {
-    name: 'JSC Trading Ltd',
+    name: 'PCS Trading Ltd',
     value: '760000'
   },
   {
-    name: 'D K Vision',
+    name: 'M K Vision',
     value: '750000'
   },
   {
-    name: 'Gadgets & Games Ltd.',
+    name: 'Digital & Games Ltd.',
     value: '730000'
   }
   
@@ -915,7 +915,7 @@ export var MultiSupercatComp = [
     ]
   },
   {
-    "name": "DVD",
+    "name": "Digital",
     "series": [
       {
         "name": "16-06-17",
@@ -932,7 +932,7 @@ export var MultiSupercatComp = [
     ]
   },
   {
-    "name": "Gaming",
+    "name": "Games",
     "series": [
       {
         "name": "16-06-17",
@@ -950,7 +950,7 @@ export var MultiSupercatComp = [
   },
    
   {
-    "name": "Phones",
+    "name": "Mobiles",
     "series": [
       {
         "name": "16-06-17",
